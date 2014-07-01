@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FNXViewController : UIViewController
+@interface FNXViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @end
