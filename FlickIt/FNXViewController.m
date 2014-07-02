@@ -24,6 +24,10 @@
 {
     [super viewDidLoad];
 
+    [self refreshPhotoList:nil];
+}
+
+- (IBAction)refreshPhotoList:(id)sender {
     FNXFlickrAPI *flickrHandler = [[FNXFlickrAPI alloc] init];
     
     [flickrHandler getRecentPhotosWithCallback:^(NSDictionary *recentPhotosDict, NSError *error)
