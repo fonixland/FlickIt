@@ -10,16 +10,6 @@
 
 @implementation FNXPhoto
 
-@synthesize farm = _farm;
-@synthesize isfamily = _isfamily;
-@synthesize isfriend = _isfriend;
-@synthesize ispublic = _ispublic;
-@synthesize owner = _owner;
-@synthesize photoId = _photoId;
-@synthesize secret = _secret;
-@synthesize server = _server;
-@synthesize title = _title;
-
 + (FNXPhoto *)instanceFromDictionary:(NSDictionary *)aDictionary
 {
 

@@ -14,6 +14,7 @@
 @interface FNXViewController ()
 
 @property (nonatomic, strong) NSArray *photoArray;
+@property (nonatomic, strong) __block UIActivityIndicatorView *imageLoadingView;
 
 @end
 
@@ -23,25 +24,13 @@
 {
     [super viewDidLoad];
 
-
-// https://api.flickr.com/services/rest/?method=flickr.photos.getRecent&api_key=39837d5fc0b23ed55fc832588e89a277&format=json&nojsoncallback=1&api_sig=f0398341a2cb4d70ae50d1da74e28606
+    FNXFlickrAPI *flickrHandler = [[FNXFlickrAPI alloc] init];
     
-    //https://api.flickr.com/services/rest/?method=flickr.photos.getRecent&api_key=f668f0cb35ee2c6e7ed8421c1c6afa67&format=json&nojsoncallback=1
-    
-//    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"getRecentPhotos" ofType:@"json"];
-//    NSData *data = [NSData dataWithContentsOfFile:filePath];
-
-    NSString *urlString = [NSString stringWithFormat:@"https://api.flickr.com/services/rest/?method=flickr.photos.getRecent&api_key=%@&format=json&nojsoncallback=1", @"86dd8f59a08a9aac6f33fdf76c4d30cd"];
-    NSURL *url = [NSURL URLWithString:urlString];
-    NSData *data = [NSData dataWithContentsOfURL:url];
-    
-    NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
-
-    _photoArray = jsonDict[@"photos"][@"photo"];
-    for (NSDictionary *photoDict in _photoArray) {
-        FNXPhoto *photo = [FNXPhoto instanceFromDictionary:photoDict];
-        NSLog(@"photo: %@", [photo dictionaryRepresentation]);
-    }
+    [flickrHandler getRecentPhotosWithCallback:^(NSDictionary *recentPhotosDict, NSError *error)
+     {
+         _photoArray = recentPhotosDict[@"photos"][@"photo"];
+         [_photoListTableView reloadData];
+     }];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -62,16 +51,41 @@
     
     FNXPhoto *photo = [FNXPhoto instanceFromDictionary:_photoArray[indexPath.row]];
     
-    // https://farm4.staticflickr.com/3912/14360146040_d7fa8c65d7_s.jpg
-    
     cell.titleLabel.text = photo.title;
+    cell.thumbnailImageView.backgroundColor = [UIColor blackColor];
+    cell.thumbnailImageView.image = nil;
     
-    NSString *urlString = [NSString stringWithFormat:@"%@://farm%@.staticflickr.com/%@/%@_%@_s.jpg", @"https", photo.farm, photo.server, photo.photoId, photo.secret];
-    NSURL *url = [NSURL URLWithString:urlString];
-    NSData *imageData = [NSData dataWithContentsOfURL:url];
-    cell.thumbnailImageView.image = [UIImage imageWithData:imageData];
+    FNXFlickrAPI *flickrHandler = [[FNXFlickrAPI alloc] init];
+    
+    [self addSpinner:cell];
+    
+    [flickrHandler getImageFromPhoto:photo withSize:@"s" withCallback:^(NSData *imageData, NSError *error)
+     {
+         UIImage *img = [[UIImage alloc]initWithData:imageData];
+         cell.thumbnailImageView.image = img;
+         
+         [self removeSpinner:cell];
+     }];
     
     return cell;
+}
+
+- (void)addSpinner:(FNXPhotoTableViewCell *)cell {
+    _imageLoadingView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    [_imageLoadingView setCenter:cell.thumbnailImageView.center];
+    _imageLoadingView.hidesWhenStopped = YES;
+    
+    [_imageLoadingView startAnimating];
+    [cell.contentView addSubview:_imageLoadingView];
+}
+
+- (void)removeSpinner:(FNXPhotoTableViewCell *)cell {
+    for (UIView *subview in cell.contentView.subviews) {
+        if ([subview isKindOfClass:[UIActivityIndicatorView class]]) {
+            [(UIActivityIndicatorView *)subview stopAnimating];
+            [subview removeFromSuperview];
+        }
+    }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -92,7 +106,6 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

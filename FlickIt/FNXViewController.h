@@ -10,4 +10,6 @@
 
 @interface FNXViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
+@property (nonatomic, strong) IBOutlet UITableView *photoListTableView;
+
 @end

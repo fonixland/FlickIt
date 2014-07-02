@@ -8,17 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface FNXPhoto : NSObject {
-    NSNumber *farm;
-    NSNumber *isfamily;
-    NSNumber *isfriend;
-    NSNumber *ispublic;
-    NSString *owner;
-    NSString *photoId;
-    NSString *secret;
-    NSString *server;
-    NSString *title;
-}
+@interface FNXPhoto : NSObject {}
 
 @property (nonatomic, copy) NSNumber *farm;
 @property (nonatomic, copy) NSNumber *isfamily;
