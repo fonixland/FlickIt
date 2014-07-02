@@ -9,6 +9,7 @@
 #import "FNXViewController.h"
 #import "FNXPhoto.h"
 #import "FNXPhotoTableViewCell.h"
+#import "FNXDetailViewController.h"
 
 @interface FNXViewController ()
 
@@ -22,20 +23,21 @@
 {
     [super viewDidLoad];
 
-//    Flickr Info:
-//    
-//Key:      86dd8f59a08a9aac6f33fdf76c4d30cd
-//    
-//Secret:   2c276a215a7e3bee
-//
+
 // https://api.flickr.com/services/rest/?method=flickr.photos.getRecent&api_key=39837d5fc0b23ed55fc832588e89a277&format=json&nojsoncallback=1&api_sig=f0398341a2cb4d70ae50d1da74e28606
     
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"getRecentPhotos" ofType:@"json"];
-    NSData *data = [NSData dataWithContentsOfFile:filePath];
+    //https://api.flickr.com/services/rest/?method=flickr.photos.getRecent&api_key=f668f0cb35ee2c6e7ed8421c1c6afa67&format=json&nojsoncallback=1
+    
+//    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"getRecentPhotos" ofType:@"json"];
+//    NSData *data = [NSData dataWithContentsOfFile:filePath];
+
+    NSString *urlString = [NSString stringWithFormat:@"https://api.flickr.com/services/rest/?method=flickr.photos.getRecent&api_key=%@&format=json&nojsoncallback=1", @"86dd8f59a08a9aac6f33fdf76c4d30cd"];
+    NSURL *url = [NSURL URLWithString:urlString];
+    NSData *data = [NSData dataWithContentsOfURL:url];
+    
     NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
 
     _photoArray = jsonDict[@"photos"][@"photo"];
-//    NSLog(@"photos count: %d", _photoArray.count);
     for (NSDictionary *photoDict in _photoArray) {
         FNXPhoto *photo = [FNXPhoto instanceFromDictionary:photoDict];
         NSLog(@"photo: %@", [photo dictionaryRepresentation]);
@@ -70,6 +72,21 @@
     cell.thumbnailImageView.image = [UIImage imageWithData:imageData];
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    UIStoryboard *board = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    FNXPhoto *photo = [FNXPhoto instanceFromDictionary:_photoArray[indexPath.row]];
+    
+    FNXDetailViewController *detailViewController = [board instantiateViewControllerWithIdentifier:@"DetailView"];
+    
+    if (nil != detailViewController) {
+        detailViewController.photo = photo;
+        [self.navigationController pushViewController:detailViewController animated:YES];
+    }
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
 
 - (void)didReceiveMemoryWarning
