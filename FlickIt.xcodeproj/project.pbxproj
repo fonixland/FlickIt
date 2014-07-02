@@ -1,0 +1,580 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		85BEE33E1962283C00E18BAF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85BEE33D1962283C00E18BAF /* Foundation.framework */; };
+		85BEE3401962283C00E18BAF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85BEE33F1962283C00E18BAF /* CoreGraphics.framework */; };
+		85BEE3421962283C00E18BAF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85BEE3411962283C00E18BAF /* UIKit.framework */; };
+		85BEE3481962283C00E18BAF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 85BEE3461962283C00E18BAF /* InfoPlist.strings */; };
+		85BEE34A1962283C00E18BAF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 85BEE3491962283C00E18BAF /* main.m */; };
+		85BEE34E1962283C00E18BAF /* FNXAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 85BEE34D1962283C00E18BAF /* FNXAppDelegate.m */; };
+		85BEE3511962283C00E18BAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85BEE34F1962283C00E18BAF /* Main.storyboard */; };
+		85BEE3541962283C00E18BAF /* FNXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85BEE3531962283C00E18BAF /* FNXViewController.m */; };
+		85BEE3561962283C00E18BAF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85BEE3551962283C00E18BAF /* Images.xcassets */; };
+		85BEE35D1962283D00E18BAF /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85BEE35C1962283D00E18BAF /* XCTest.framework */; };
+		85BEE35E1962283D00E18BAF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85BEE33D1962283C00E18BAF /* Foundation.framework */; };
+		85BEE35F1962283D00E18BAF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85BEE3411962283C00E18BAF /* UIKit.framework */; };
+		85BEE3671962283D00E18BAF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 85BEE3651962283D00E18BAF /* InfoPlist.strings */; };
+		85BEE3691962283D00E18BAF /* FlickItTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 85BEE3681962283D00E18BAF /* FlickItTests.m */; };
+		85BEE376196249D700E18BAF /* FNXPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 85BEE375196249D700E18BAF /* FNXPhoto.m */; };
+		85BEE377196249D700E18BAF /* FNXPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 85BEE375196249D700E18BAF /* FNXPhoto.m */; };
+		85BEE37919624ABB00E18BAF /* getRecentPhotos.json in Resources */ = {isa = PBXBuildFile; fileRef = 85BEE37819624ABB00E18BAF /* getRecentPhotos.json */; };
+		85BEE37A19624ABB00E18BAF /* getRecentPhotos.json in Resources */ = {isa = PBXBuildFile; fileRef = 85BEE37819624ABB00E18BAF /* getRecentPhotos.json */; };
+		85BEE37D1962576000E18BAF /* FNXPhotoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 85BEE37C1962576000E18BAF /* FNXPhotoTableViewCell.m */; };
+		85BEE37E1962576000E18BAF /* FNXPhotoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 85BEE37C1962576000E18BAF /* FNXPhotoTableViewCell.m */; };
+		85C0E9E019637EEE00B4F438 /* FNXDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85C0E9DF19637EEE00B4F438 /* FNXDetailViewController.m */; };
+		85C0E9E119637EEE00B4F438 /* FNXDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85C0E9DF19637EEE00B4F438 /* FNXDetailViewController.m */; };
+		85C0E9E41963922D00B4F438 /* FNXComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 85C0E9E31963922D00B4F438 /* FNXComment.m */; };
+		85C0E9E51963922D00B4F438 /* FNXComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 85C0E9E31963922D00B4F438 /* FNXComment.m */; };
+		85C0E9E819642D7900B4F438 /* FNXFlickrAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 85C0E9E719642D7900B4F438 /* FNXFlickrAPI.m */; };
+		85C0E9E919642D7900B4F438 /* FNXFlickrAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 85C0E9E719642D7900B4F438 /* FNXFlickrAPI.m */; };
+		85C0E9ED1964357C00B4F438 /* FNXRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 85C0E9EC1964357C00B4F438 /* FNXRequest.m */; };
+		85C0E9EE1964357C00B4F438 /* FNXRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 85C0E9EC1964357C00B4F438 /* FNXRequest.m */; };
+		85C0E9F219647C7200B4F438 /* commentGetList.json in Resources */ = {isa = PBXBuildFile; fileRef = 85C0E9F019647C7200B4F438 /* commentGetList.json */; };
+		85C0E9F319647C7200B4F438 /* commentGetList.json in Resources */ = {isa = PBXBuildFile; fileRef = 85C0E9F019647C7200B4F438 /* commentGetList.json */; };
+		85C0E9F419647C7200B4F438 /* peopleGetInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 85C0E9F119647C7200B4F438 /* peopleGetInfo.json */; };
+		85C0E9F519647C7200B4F438 /* peopleGetInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 85C0E9F119647C7200B4F438 /* peopleGetInfo.json */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		85BEE3601962283D00E18BAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 85BEE3321962283C00E18BAF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 85BEE3391962283C00E18BAF;
+			remoteInfo = FlickIt;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		85BEE33A1962283C00E18BAF /* FlickIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		85BEE33D1962283C00E18BAF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		85BEE33F1962283C00E18BAF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		85BEE3411962283C00E18BAF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		85BEE3451962283C00E18BAF /* FlickIt-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FlickIt-Info.plist"; sourceTree = "<group>"; };
+		85BEE3471962283C00E18BAF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		85BEE3491962283C00E18BAF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		85BEE34B1962283C00E18BAF /* FlickIt-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FlickIt-Prefix.pch"; sourceTree = "<group>"; };
+		85BEE34C1962283C00E18BAF /* FNXAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FNXAppDelegate.h; sourceTree = "<group>"; };
+		85BEE34D1962283C00E18BAF /* FNXAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FNXAppDelegate.m; sourceTree = "<group>"; };
+		85BEE3501962283C00E18BAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		85BEE3521962283C00E18BAF /* FNXViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FNXViewController.h; path = ../FNXViewController.h; sourceTree = "<group>"; };
+		85BEE3531962283C00E18BAF /* FNXViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = FNXViewController.m; path = ../FNXViewController.m; sourceTree = "<group>"; };
+		85BEE3551962283C00E18BAF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		85BEE35B1962283D00E18BAF /* FlickItTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlickItTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		85BEE35C1962283D00E18BAF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		85BEE3641962283D00E18BAF /* FlickItTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FlickItTests-Info.plist"; sourceTree = "<group>"; };
+		85BEE3661962283D00E18BAF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		85BEE3681962283D00E18BAF /* FlickItTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlickItTests.m; sourceTree = "<group>"; };
+		85BEE374196249D700E18BAF /* FNXPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FNXPhoto.h; sourceTree = "<group>"; };
+		85BEE375196249D700E18BAF /* FNXPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FNXPhoto.m; sourceTree = "<group>"; };
+		85BEE37819624ABB00E18BAF /* getRecentPhotos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getRecentPhotos.json; sourceTree = "<group>"; };
+		85BEE37B1962576000E18BAF /* FNXPhotoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FNXPhotoTableViewCell.h; sourceTree = "<group>"; };
+		85BEE37C1962576000E18BAF /* FNXPhotoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FNXPhotoTableViewCell.m; sourceTree = "<group>"; };
+		85C0E9DE19637EEE00B4F438 /* FNXDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FNXDetailViewController.h; sourceTree = "<group>"; };
+		85C0E9DF19637EEE00B4F438 /* FNXDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FNXDetailViewController.m; sourceTree = "<group>"; };
+		85C0E9E21963922D00B4F438 /* FNXComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FNXComment.h; sourceTree = "<group>"; };
+		85C0E9E31963922D00B4F438 /* FNXComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FNXComment.m; sourceTree = "<group>"; };
+		85C0E9E619642D7900B4F438 /* FNXFlickrAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FNXFlickrAPI.h; sourceTree = "<group>"; };
+		85C0E9E719642D7900B4F438 /* FNXFlickrAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FNXFlickrAPI.m; sourceTree = "<group>"; };
+		85C0E9EA19642FB200B4F438 /* ConstantsAndMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConstantsAndMacros.h; sourceTree = "<group>"; };
+		85C0E9EB1964357C00B4F438 /* FNXRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FNXRequest.h; sourceTree = "<group>"; };
+		85C0E9EC1964357C00B4F438 /* FNXRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FNXRequest.m; sourceTree = "<group>"; };
+		85C0E9F019647C7200B4F438 /* commentGetList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = commentGetList.json; sourceTree = "<group>"; };
+		85C0E9F119647C7200B4F438 /* peopleGetInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = peopleGetInfo.json; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		85BEE3371962283C00E18BAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85BEE3401962283C00E18BAF /* CoreGraphics.framework in Frameworks */,
+				85BEE3421962283C00E18BAF /* UIKit.framework in Frameworks */,
+				85BEE33E1962283C00E18BAF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85BEE3581962283D00E18BAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85BEE35D1962283D00E18BAF /* XCTest.framework in Frameworks */,
+				85BEE35F1962283D00E18BAF /* UIKit.framework in Frameworks */,
+				85BEE35E1962283D00E18BAF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		85BEE3311962283C00E18BAF = {
+			isa = PBXGroup;
+			children = (
+				85BEE3431962283C00E18BAF /* FlickIt */,
+				85BEE3621962283D00E18BAF /* FlickItTests */,
+				85BEE33C1962283C00E18BAF /* Frameworks */,
+				85BEE33B1962283C00E18BAF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		85BEE33B1962283C00E18BAF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				85BEE33A1962283C00E18BAF /* FlickIt.app */,
+				85BEE35B1962283D00E18BAF /* FlickItTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		85BEE33C1962283C00E18BAF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				85BEE33D1962283C00E18BAF /* Foundation.framework */,
+				85BEE33F1962283C00E18BAF /* CoreGraphics.framework */,
+				85BEE3411962283C00E18BAF /* UIKit.framework */,
+				85BEE35C1962283D00E18BAF /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		85BEE3431962283C00E18BAF /* FlickIt */ = {
+			isa = PBXGroup;
+			children = (
+				85BEE37219622A3D00E18BAF /* Controllers */,
+				85BEE37319622A3D00E18BAF /* Models */,
+				85BEE34C1962283C00E18BAF /* FNXAppDelegate.h */,
+				85BEE34D1962283C00E18BAF /* FNXAppDelegate.m */,
+				85BEE34F1962283C00E18BAF /* Main.storyboard */,
+				85BEE3551962283C00E18BAF /* Images.xcassets */,
+				85BEE3441962283C00E18BAF /* Supporting Files */,
+			);
+			path = FlickIt;
+			sourceTree = "<group>";
+		};
+		85BEE3441962283C00E18BAF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				85BEE3451962283C00E18BAF /* FlickIt-Info.plist */,
+				85BEE3461962283C00E18BAF /* InfoPlist.strings */,
+				85BEE3491962283C00E18BAF /* main.m */,
+				85BEE34B1962283C00E18BAF /* FlickIt-Prefix.pch */,
+				85C0E9EA19642FB200B4F438 /* ConstantsAndMacros.h */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		85BEE3621962283D00E18BAF /* FlickItTests */ = {
+			isa = PBXGroup;
+			children = (
+				85BEE3681962283D00E18BAF /* FlickItTests.m */,
+				85BEE3631962283D00E18BAF /* Supporting Files */,
+			);
+			path = FlickItTests;
+			sourceTree = "<group>";
+		};
+		85BEE3631962283D00E18BAF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				85C0E9F019647C7200B4F438 /* commentGetList.json */,
+				85C0E9F119647C7200B4F438 /* peopleGetInfo.json */,
+				85BEE37819624ABB00E18BAF /* getRecentPhotos.json */,
+				85BEE3641962283D00E18BAF /* FlickItTests-Info.plist */,
+				85BEE3651962283D00E18BAF /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		85BEE37219622A3D00E18BAF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				85BEE3521962283C00E18BAF /* FNXViewController.h */,
+				85BEE3531962283C00E18BAF /* FNXViewController.m */,
+				85BEE37B1962576000E18BAF /* FNXPhotoTableViewCell.h */,
+				85BEE37C1962576000E18BAF /* FNXPhotoTableViewCell.m */,
+				85C0E9DE19637EEE00B4F438 /* FNXDetailViewController.h */,
+				85C0E9DF19637EEE00B4F438 /* FNXDetailViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		85BEE37319622A3D00E18BAF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				85C0E9E21963922D00B4F438 /* FNXComment.h */,
+				85C0E9E31963922D00B4F438 /* FNXComment.m */,
+				85BEE374196249D700E18BAF /* FNXPhoto.h */,
+				85BEE375196249D700E18BAF /* FNXPhoto.m */,
+				85C0E9E619642D7900B4F438 /* FNXFlickrAPI.h */,
+				85C0E9E719642D7900B4F438 /* FNXFlickrAPI.m */,
+				85C0E9EB1964357C00B4F438 /* FNXRequest.h */,
+				85C0E9EC1964357C00B4F438 /* FNXRequest.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		85BEE3391962283C00E18BAF /* FlickIt */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85BEE36C1962283D00E18BAF /* Build configuration list for PBXNativeTarget "FlickIt" */;
+			buildPhases = (
+				85BEE3361962283C00E18BAF /* Sources */,
+				85BEE3371962283C00E18BAF /* Frameworks */,
+				85BEE3381962283C00E18BAF /* Resources */,
+				85C0E9EF1964724D00B4F438 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FlickIt;
+			productName = FlickIt;
+			productReference = 85BEE33A1962283C00E18BAF /* FlickIt.app */;
+			productType = "com.apple.product-type.application";
+		};
+		85BEE35A1962283D00E18BAF /* FlickItTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85BEE36F1962283D00E18BAF /* Build configuration list for PBXNativeTarget "FlickItTests" */;
+			buildPhases = (
+				85BEE3571962283D00E18BAF /* Sources */,
+				85BEE3581962283D00E18BAF /* Frameworks */,
+				85BEE3591962283D00E18BAF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				85BEE3611962283D00E18BAF /* PBXTargetDependency */,
+			);
+			name = FlickItTests;
+			productName = FlickItTests;
+			productReference = 85BEE35B1962283D00E18BAF /* FlickItTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		85BEE3321962283C00E18BAF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = FNX;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Fonixland Studios";
+				TargetAttributes = {
+					85BEE3391962283C00E18BAF = {
+						DevelopmentTeam = 2D8Z7KMSUA;
+					};
+					85BEE35A1962283D00E18BAF = {
+						TestTargetID = 85BEE3391962283C00E18BAF;
+					};
+				};
+			};
+			buildConfigurationList = 85BEE3351962283C00E18BAF /* Build configuration list for PBXProject "FlickIt" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 85BEE3311962283C00E18BAF;
+			productRefGroup = 85BEE33B1962283C00E18BAF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				85BEE3391962283C00E18BAF /* FlickIt */,
+				85BEE35A1962283D00E18BAF /* FlickItTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		85BEE3381962283C00E18BAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85BEE3561962283C00E18BAF /* Images.xcassets in Resources */,
+				85C0E9F219647C7200B4F438 /* commentGetList.json in Resources */,
+				85BEE3481962283C00E18BAF /* InfoPlist.strings in Resources */,
+				85BEE37919624ABB00E18BAF /* getRecentPhotos.json in Resources */,
+				85BEE3511962283C00E18BAF /* Main.storyboard in Resources */,
+				85C0E9F419647C7200B4F438 /* peopleGetInfo.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85BEE3591962283D00E18BAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85BEE37A19624ABB00E18BAF /* getRecentPhotos.json in Resources */,
+				85BEE3671962283D00E18BAF /* InfoPlist.strings in Resources */,
+				85C0E9F319647C7200B4F438 /* commentGetList.json in Resources */,
+				85C0E9F519647C7200B4F438 /* peopleGetInfo.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		85C0E9EF1964724D00B4F438 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "APPLEDOC_PATH=`which appledoc`\nif [ $APPLEDOC_PATH ]; then\n$APPLEDOC_PATH \\\n--project-name ${PRODUCT_NAME} \\\n--project-company \"Fonixland Studios\" \\\n--company-id \"com.fonixland\" \\\n--output ${PRODUCT_NAME}Docs \\\n--keep-undocumented-objects \\\n--keep-undocumented-members \\\n--keep-intermediate-files \\\n--no-install-docset \\\n--no-repeat-first-par \\\n--no-warn-invalid-crossref \\\n--exit-threshold 2 \\\n${PROJECT_DIR}/${PRODUCT_NAME}\nfi;";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		85BEE3361962283C00E18BAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85BEE34A1962283C00E18BAF /* main.m in Sources */,
+				85C0E9E41963922D00B4F438 /* FNXComment.m in Sources */,
+				85C0E9E819642D7900B4F438 /* FNXFlickrAPI.m in Sources */,
+				85BEE34E1962283C00E18BAF /* FNXAppDelegate.m in Sources */,
+				85C0E9ED1964357C00B4F438 /* FNXRequest.m in Sources */,
+				85C0E9E019637EEE00B4F438 /* FNXDetailViewController.m in Sources */,
+				85BEE3541962283C00E18BAF /* FNXViewController.m in Sources */,
+				85BEE37D1962576000E18BAF /* FNXPhotoTableViewCell.m in Sources */,
+				85BEE376196249D700E18BAF /* FNXPhoto.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85BEE3571962283D00E18BAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85C0E9E919642D7900B4F438 /* FNXFlickrAPI.m in Sources */,
+				85BEE3691962283D00E18BAF /* FlickItTests.m in Sources */,
+				85BEE37E1962576000E18BAF /* FNXPhotoTableViewCell.m in Sources */,
+				85C0E9E119637EEE00B4F438 /* FNXDetailViewController.m in Sources */,
+				85BEE377196249D700E18BAF /* FNXPhoto.m in Sources */,
+				85C0E9EE1964357C00B4F438 /* FNXRequest.m in Sources */,
+				85C0E9E51963922D00B4F438 /* FNXComment.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		85BEE3611962283D00E18BAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 85BEE3391962283C00E18BAF /* FlickIt */;
+			targetProxy = 85BEE3601962283D00E18BAF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		85BEE3461962283C00E18BAF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				85BEE3471962283C00E18BAF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		85BEE34F1962283C00E18BAF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				85BEE3501962283C00E18BAF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		85BEE3651962283D00E18BAF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				85BEE3661962283D00E18BAF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		85BEE36A1962283D00E18BAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		85BEE36B1962283D00E18BAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		85BEE36D1962283D00E18BAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FlickIt/FlickIt-Prefix.pch";
+				INFOPLIST_FILE = "FlickIt/FlickIt-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		85BEE36E1962283D00E18BAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FlickIt/FlickIt-Prefix.pch";
+				INFOPLIST_FILE = "FlickIt/FlickIt-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		85BEE3701962283D00E18BAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FlickIt.app/FlickIt";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FlickIt/FlickIt-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "FlickItTests/FlickItTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		85BEE3711962283D00E18BAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FlickIt.app/FlickIt";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FlickIt/FlickIt-Prefix.pch";
+				INFOPLIST_FILE = "FlickItTests/FlickItTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		85BEE3351962283C00E18BAF /* Build configuration list for PBXProject "FlickIt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85BEE36A1962283D00E18BAF /* Debug */,
+				85BEE36B1962283D00E18BAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85BEE36C1962283D00E18BAF /* Build configuration list for PBXNativeTarget "FlickIt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85BEE36D1962283D00E18BAF /* Debug */,
+				85BEE36E1962283D00E18BAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85BEE36F1962283D00E18BAF /* Build configuration list for PBXNativeTarget "FlickItTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85BEE3701962283D00E18BAF /* Debug */,
+				85BEE3711962283D00E18BAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 85BEE3321962283C00E18BAF /* Project object */;
+}
