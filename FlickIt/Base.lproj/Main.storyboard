@@ -68,7 +68,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Recent Photos" id="sik-V1-Cit"/>
+                    <navigationItem key="navigationItem" title="Recent Photos" id="sik-V1-Cit">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="lKU-uu-vse">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="refreshPhotoList:" destination="vXZ-lx-hvc" id="SQd-f9-etL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="photoListTableView" destination="ZJD-Gu-gjf" id="ZNx-vu-Ps1"/>
                         <segue destination="cuI-x6-y22" kind="push" identifier="DetailViewSegue" id="LGY-JA-yIw"/>

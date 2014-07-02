@@ -12,4 +12,6 @@
 
 @property (nonatomic, strong) IBOutlet UITableView *photoListTableView;
 
+- (IBAction)refreshPhotoList:(id)sender;
+
 @end
