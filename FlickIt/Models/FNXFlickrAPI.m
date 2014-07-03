@@ -72,6 +72,19 @@
 }
 
 /**
+ *  getImageURLForPhoto
+ *
+ *  @param photo an FNXPhoto object
+ *  @param size  an NSString with one of Flickr's letter designations for image size
+ *
+ *  @return the URL as an NSString
+ */
+-(NSString *) getImageURLForPhoto:(FNXPhoto *)photo withSize:(NSString *)size {
+    return [NSString stringWithFormat:@"%@://farm%@.staticflickr.com/%@/%@_%@_%@.jpg", @"https", photo.farm, photo.server, photo.photoId, photo.secret, size];
+}
+
+
+/**
  *  getCommentsForPhoto:withCallback:
  *
  *  @param photo    an FNXPhoto object
