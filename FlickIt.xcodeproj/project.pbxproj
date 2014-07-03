@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8543D5041964E9E0009ADE66 /* Main-iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8543D5021964E9E0009ADE66 /* Main-iPad.storyboard */; };
+		8543D5051964E9E0009ADE66 /* Main-iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8543D5021964E9E0009ADE66 /* Main-iPad.storyboard */; };
 		85BEE33E1962283C00E18BAF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85BEE33D1962283C00E18BAF /* Foundation.framework */; };
 		85BEE3401962283C00E18BAF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85BEE33F1962283C00E18BAF /* CoreGraphics.framework */; };
 		85BEE3421962283C00E18BAF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85BEE3411962283C00E18BAF /* UIKit.framework */; };
@@ -52,6 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8543D5031964E9E0009ADE66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Main-iPad.storyboard"; sourceTree = "<group>"; };
 		85BEE33A1962283C00E18BAF /* FlickIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85BEE33D1962283C00E18BAF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		85BEE33F1962283C00E18BAF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -151,6 +154,7 @@
 				85BEE34C1962283C00E18BAF /* FNXAppDelegate.h */,
 				85BEE34D1962283C00E18BAF /* FNXAppDelegate.m */,
 				85BEE34F1962283C00E18BAF /* Main.storyboard */,
+				8543D5021964E9E0009ADE66 /* Main-iPad.storyboard */,
 				85BEE3551962283C00E18BAF /* Images.xcassets */,
 				85BEE3441962283C00E18BAF /* Supporting Files */,
 			);
@@ -301,6 +305,7 @@
 			files = (
 				85BEE3561962283C00E18BAF /* Images.xcassets in Resources */,
 				85C0E9F219647C7200B4F438 /* commentGetList.json in Resources */,
+				8543D5041964E9E0009ADE66 /* Main-iPad.storyboard in Resources */,
 				85BEE3481962283C00E18BAF /* InfoPlist.strings in Resources */,
 				85BEE37919624ABB00E18BAF /* getRecentPhotos.json in Resources */,
 				85BEE3511962283C00E18BAF /* Main.storyboard in Resources */,
@@ -314,6 +319,7 @@
 			files = (
 				85BEE37A19624ABB00E18BAF /* getRecentPhotos.json in Resources */,
 				85BEE3671962283D00E18BAF /* InfoPlist.strings in Resources */,
+				8543D5051964E9E0009ADE66 /* Main-iPad.storyboard in Resources */,
 				85C0E9F319647C7200B4F438 /* commentGetList.json in Resources */,
 				85C0E9F519647C7200B4F438 /* peopleGetInfo.json in Resources */,
 			);
@@ -379,6 +385,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		8543D5021964E9E0009ADE66 /* Main-iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8543D5031964E9E0009ADE66 /* Base */,
+			);
+			name = "Main-iPad.storyboard";
+			sourceTree = "<group>";
+		};
 		85BEE3461962283C00E18BAF /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -485,7 +499,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlickIt/FlickIt-Prefix.pch";
 				INFOPLIST_FILE = "FlickIt/FlickIt-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -499,7 +515,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlickIt/FlickIt-Prefix.pch";
 				INFOPLIST_FILE = "FlickIt/FlickIt-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
