@@ -10,11 +10,13 @@
 #import "FNXPhoto.h"
 #import "FNXPhotoTableViewCell.h"
 #import "FNXDetailViewController.h"
+#import "FNXImageCache.h"
 
 @interface FNXViewController ()
 
 @property (nonatomic, strong) NSArray *photoArray;
 @property (nonatomic, strong) __block UIActivityIndicatorView *imageLoadingView;
+@property (nonatomic, strong) FNXImageCache *imageCache;
 
 @end
 
@@ -61,16 +63,28 @@
     
     FNXFlickrAPI *flickrHandler = [[FNXFlickrAPI alloc] init];
     
-    [self addSpinner:cell];
-    
-    [flickrHandler getImageFromPhoto:photo withSize:@"s" withCallback:^(NSData *imageData, NSError *error)
-     {
-         UIImage *img = [[UIImage alloc]initWithData:imageData];
-         cell.thumbnailImageView.image = img;
-         
-         [self removeSpinner:cell];
-     }];
-    
+    // Check the cache for the image first
+    NSString *imageURL = [flickrHandler getImageURLForPhoto:photo withSize:@"s"];
+    if ([[FNXImageCache sharedImageCache] isCached:imageURL] == true) {
+        FNXDebugLogDetailed(@"grabbing cached image: %@", imageURL);
+        cell.thumbnailImageView.image = [[FNXImageCache sharedImageCache] getImageForURL:imageURL];
+    }
+    else // Otherwise fetch the image from Flickr
+    {
+        [self addSpinner:cell];
+        
+        [flickrHandler getImageFromPhoto:photo withSize:@"s" withCallback:^(NSData *imageData, NSError *error)
+         {
+             UIImage *img = [[UIImage alloc]initWithData:imageData];
+             cell.thumbnailImageView.image = img;
+             
+             // Add the image to the cache
+             [[FNXImageCache sharedImageCache] addImage:img forURL:imageURL];
+             FNXDebugLogDetailed(@"image cached: %@", imageURL);
+             
+             [self removeSpinner:cell];
+         }];
+    }
     return cell;
 }
 

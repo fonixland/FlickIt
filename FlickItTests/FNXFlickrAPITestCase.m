@@ -1,18 +1,19 @@
 //
-//  FlickItTests.m
-//  FlickItTests
+//  FNXFlickrAPITestCase.m
+//  FlickIt
 //
-//  Created by Bill Weakley on 6/30/14.
+//  Created by Bill Weakley on 7/3/14.
 //  Copyright (c) 2014 Fonixland Studios. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
+#import "FNXFlickrAPI.h"
 
-@interface FlickItTests : XCTestCase
+@interface FNXFlickrAPITestCase : XCTestCase
 
 @end
 
-@implementation FlickItTests
+@implementation FNXFlickrAPITestCase
 
 - (void)setUp
 {
@@ -26,9 +27,17 @@
     [super tearDown];
 }
 
-//- (void)testExample
-//{
-//    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
-//}
+#pragma mark - helper methods
+
+- (FNXFlickrAPI *)createInstance {
+    
+    return [[FNXFlickrAPI alloc] init];
+    
+}
+
+- (void)testInitDoesNotReturnNil
+{
+    XCTAssertNotNil([self createInstance]);
+}
 
 @end

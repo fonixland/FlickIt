@@ -9,10 +9,12 @@
 #import "FNXDetailViewController.h"
 #import "FNXComment.h"
 #import "FNXPhoto.h"
+#import "FNXImageCache.h"
 
 @interface FNXDetailViewController ()
 
 @property (nonatomic, weak) NSArray *commentArray;
+@property (nonatomic, strong) FNXImageCache *imageCache;
 
 @end
 
@@ -39,13 +41,26 @@
     FNXFlickrAPI *flickrHandler = [[FNXFlickrAPI alloc] init];
     
     /* get image */
-    [flickrHandler getImageFromPhoto:_photo withSize:@"n" withCallback:^(NSData *imageData, NSError *error)
-     {
-         UIImage *img = [[UIImage alloc]initWithData:imageData];
-         _photoView.image = img;
-         
-     }];
     
+    // Check the cache for the image first
+    NSString *imageURL = [flickrHandler getImageURLForPhoto:_photo withSize:@"n"];
+    if ([[FNXImageCache sharedImageCache] isCached:imageURL] == true) {
+        FNXDebugLogDetailed(@"grabbing cached image: %@", imageURL);
+        _photoView.image = [[FNXImageCache sharedImageCache] getImageForURL:imageURL];
+    }
+    else // Otherwise fetch the image from Flickr
+    {
+        [flickrHandler getImageFromPhoto:_photo withSize:@"n" withCallback:^(NSData *imageData, NSError *error)
+         {
+             UIImage *img = [[UIImage alloc]initWithData:imageData];
+             _photoView.image = img;
+             
+             // Add the image to the cache
+             [[FNXImageCache sharedImageCache] addImage:img forURL:imageURL];
+             FNXDebugLogDetailed(@"image cached: %@", imageURL);
+         }];
+    }
+
     /* get comments */
     [flickrHandler getCommentsForPhoto:_photo withCallback:^(NSDictionary *commentsDict, NSError *error)
      {

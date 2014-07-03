@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8543D5041964E9E0009ADE66 /* Main-iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8543D5021964E9E0009ADE66 /* Main-iPad.storyboard */; };
+		8543D5051964E9E0009ADE66 /* Main-iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8543D5021964E9E0009ADE66 /* Main-iPad.storyboard */; };
+		8543D5081964F5BD009ADE66 /* FNXImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 8543D5071964F5BD009ADE66 /* FNXImageCache.m */; };
+		8543D5091964F5BD009ADE66 /* FNXImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 8543D5071964F5BD009ADE66 /* FNXImageCache.m */; };
+		8543D50B19650EC6009ADE66 /* FNXFlickrAPITestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 8543D50A19650EC6009ADE66 /* FNXFlickrAPITestCase.m */; };
+		8543D50D196511DD009ADE66 /* FNXImageCacheTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 8543D50C196511DD009ADE66 /* FNXImageCacheTestCase.m */; };
 		85BEE33E1962283C00E18BAF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85BEE33D1962283C00E18BAF /* Foundation.framework */; };
 		85BEE3401962283C00E18BAF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85BEE33F1962283C00E18BAF /* CoreGraphics.framework */; };
 		85BEE3421962283C00E18BAF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85BEE3411962283C00E18BAF /* UIKit.framework */; };
@@ -52,6 +58,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8543D5031964E9E0009ADE66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Main-iPad.storyboard"; sourceTree = "<group>"; };
+		8543D5061964F5BD009ADE66 /* FNXImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FNXImageCache.h; sourceTree = "<group>"; };
+		8543D5071964F5BD009ADE66 /* FNXImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FNXImageCache.m; sourceTree = "<group>"; };
+		8543D50A19650EC6009ADE66 /* FNXFlickrAPITestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FNXFlickrAPITestCase.m; sourceTree = "<group>"; };
+		8543D50C196511DD009ADE66 /* FNXImageCacheTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FNXImageCacheTestCase.m; sourceTree = "<group>"; };
 		85BEE33A1962283C00E18BAF /* FlickIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85BEE33D1962283C00E18BAF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		85BEE33F1962283C00E18BAF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -151,6 +162,7 @@
 				85BEE34C1962283C00E18BAF /* FNXAppDelegate.h */,
 				85BEE34D1962283C00E18BAF /* FNXAppDelegate.m */,
 				85BEE34F1962283C00E18BAF /* Main.storyboard */,
+				8543D5021964E9E0009ADE66 /* Main-iPad.storyboard */,
 				85BEE3551962283C00E18BAF /* Images.xcassets */,
 				85BEE3441962283C00E18BAF /* Supporting Files */,
 			);
@@ -174,6 +186,8 @@
 			children = (
 				85BEE3681962283D00E18BAF /* FlickItTests.m */,
 				85BEE3631962283D00E18BAF /* Supporting Files */,
+				8543D50A19650EC6009ADE66 /* FNXFlickrAPITestCase.m */,
+				8543D50C196511DD009ADE66 /* FNXImageCacheTestCase.m */,
 			);
 			path = FlickItTests;
 			sourceTree = "<group>";
@@ -214,6 +228,8 @@
 				85C0E9E719642D7900B4F438 /* FNXFlickrAPI.m */,
 				85C0E9EB1964357C00B4F438 /* FNXRequest.h */,
 				85C0E9EC1964357C00B4F438 /* FNXRequest.m */,
+				8543D5061964F5BD009ADE66 /* FNXImageCache.h */,
+				8543D5071964F5BD009ADE66 /* FNXImageCache.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -301,6 +317,7 @@
 			files = (
 				85BEE3561962283C00E18BAF /* Images.xcassets in Resources */,
 				85C0E9F219647C7200B4F438 /* commentGetList.json in Resources */,
+				8543D5041964E9E0009ADE66 /* Main-iPad.storyboard in Resources */,
 				85BEE3481962283C00E18BAF /* InfoPlist.strings in Resources */,
 				85BEE37919624ABB00E18BAF /* getRecentPhotos.json in Resources */,
 				85BEE3511962283C00E18BAF /* Main.storyboard in Resources */,
@@ -314,6 +331,7 @@
 			files = (
 				85BEE37A19624ABB00E18BAF /* getRecentPhotos.json in Resources */,
 				85BEE3671962283D00E18BAF /* InfoPlist.strings in Resources */,
+				8543D5051964E9E0009ADE66 /* Main-iPad.storyboard in Resources */,
 				85C0E9F319647C7200B4F438 /* commentGetList.json in Resources */,
 				85C0E9F519647C7200B4F438 /* peopleGetInfo.json in Resources */,
 			);
@@ -345,6 +363,7 @@
 				85BEE34A1962283C00E18BAF /* main.m in Sources */,
 				85C0E9E41963922D00B4F438 /* FNXComment.m in Sources */,
 				85C0E9E819642D7900B4F438 /* FNXFlickrAPI.m in Sources */,
+				8543D5081964F5BD009ADE66 /* FNXImageCache.m in Sources */,
 				85BEE34E1962283C00E18BAF /* FNXAppDelegate.m in Sources */,
 				85C0E9ED1964357C00B4F438 /* FNXRequest.m in Sources */,
 				85C0E9E019637EEE00B4F438 /* FNXDetailViewController.m in Sources */,
@@ -361,8 +380,11 @@
 				85C0E9E919642D7900B4F438 /* FNXFlickrAPI.m in Sources */,
 				85BEE3691962283D00E18BAF /* FlickItTests.m in Sources */,
 				85BEE37E1962576000E18BAF /* FNXPhotoTableViewCell.m in Sources */,
+				8543D50D196511DD009ADE66 /* FNXImageCacheTestCase.m in Sources */,
 				85C0E9E119637EEE00B4F438 /* FNXDetailViewController.m in Sources */,
+				8543D50B19650EC6009ADE66 /* FNXFlickrAPITestCase.m in Sources */,
 				85BEE377196249D700E18BAF /* FNXPhoto.m in Sources */,
+				8543D5091964F5BD009ADE66 /* FNXImageCache.m in Sources */,
 				85C0E9EE1964357C00B4F438 /* FNXRequest.m in Sources */,
 				85C0E9E51963922D00B4F438 /* FNXComment.m in Sources */,
 			);
@@ -379,6 +401,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		8543D5021964E9E0009ADE66 /* Main-iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8543D5031964E9E0009ADE66 /* Base */,
+			);
+			name = "Main-iPad.storyboard";
+			sourceTree = "<group>";
+		};
 		85BEE3461962283C00E18BAF /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -485,7 +515,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlickIt/FlickIt-Prefix.pch";
 				INFOPLIST_FILE = "FlickIt/FlickIt-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -499,7 +531,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlickIt/FlickIt-Prefix.pch";
 				INFOPLIST_FILE = "FlickIt/FlickIt-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

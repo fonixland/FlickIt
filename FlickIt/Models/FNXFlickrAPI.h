@@ -17,6 +17,7 @@
 #pragma mark - API Call Methods
 -(void) getRecentPhotosWithCallback:(FNXObjectCallback)callback;
 -(void) getImageFromPhoto:(FNXPhoto *)photo withSize:(NSString *)size withCallback:(FNXObjectCallback)callback;
+-(NSString *) getImageURLForPhoto:(FNXPhoto *)photo withSize:(NSString *)size;
 -(void) getCommentsForPhoto:(FNXPhoto *)photo withCallback:(FNXObjectCallback)callback;
 -(void) getPhotographerInfoForUser:(NSString *)userId withCallback:(FNXObjectCallback)callback;
 
