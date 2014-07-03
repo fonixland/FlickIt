@@ -11,6 +11,8 @@
 		8543D5051964E9E0009ADE66 /* Main-iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8543D5021964E9E0009ADE66 /* Main-iPad.storyboard */; };
 		8543D5081964F5BD009ADE66 /* FNXImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 8543D5071964F5BD009ADE66 /* FNXImageCache.m */; };
 		8543D5091964F5BD009ADE66 /* FNXImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 8543D5071964F5BD009ADE66 /* FNXImageCache.m */; };
+		8543D50B19650EC6009ADE66 /* FNXFlickrAPITestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 8543D50A19650EC6009ADE66 /* FNXFlickrAPITestCase.m */; };
+		8543D50D196511DD009ADE66 /* FNXImageCacheTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 8543D50C196511DD009ADE66 /* FNXImageCacheTestCase.m */; };
 		85BEE33E1962283C00E18BAF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85BEE33D1962283C00E18BAF /* Foundation.framework */; };
 		85BEE3401962283C00E18BAF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85BEE33F1962283C00E18BAF /* CoreGraphics.framework */; };
 		85BEE3421962283C00E18BAF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85BEE3411962283C00E18BAF /* UIKit.framework */; };
@@ -59,6 +61,8 @@
 		8543D5031964E9E0009ADE66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Main-iPad.storyboard"; sourceTree = "<group>"; };
 		8543D5061964F5BD009ADE66 /* FNXImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FNXImageCache.h; sourceTree = "<group>"; };
 		8543D5071964F5BD009ADE66 /* FNXImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FNXImageCache.m; sourceTree = "<group>"; };
+		8543D50A19650EC6009ADE66 /* FNXFlickrAPITestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FNXFlickrAPITestCase.m; sourceTree = "<group>"; };
+		8543D50C196511DD009ADE66 /* FNXImageCacheTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FNXImageCacheTestCase.m; sourceTree = "<group>"; };
 		85BEE33A1962283C00E18BAF /* FlickIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85BEE33D1962283C00E18BAF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		85BEE33F1962283C00E18BAF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -182,6 +186,8 @@
 			children = (
 				85BEE3681962283D00E18BAF /* FlickItTests.m */,
 				85BEE3631962283D00E18BAF /* Supporting Files */,
+				8543D50A19650EC6009ADE66 /* FNXFlickrAPITestCase.m */,
+				8543D50C196511DD009ADE66 /* FNXImageCacheTestCase.m */,
 			);
 			path = FlickItTests;
 			sourceTree = "<group>";
@@ -374,7 +380,9 @@
 				85C0E9E919642D7900B4F438 /* FNXFlickrAPI.m in Sources */,
 				85BEE3691962283D00E18BAF /* FlickItTests.m in Sources */,
 				85BEE37E1962576000E18BAF /* FNXPhotoTableViewCell.m in Sources */,
+				8543D50D196511DD009ADE66 /* FNXImageCacheTestCase.m in Sources */,
 				85C0E9E119637EEE00B4F438 /* FNXDetailViewController.m in Sources */,
+				8543D50B19650EC6009ADE66 /* FNXFlickrAPITestCase.m in Sources */,
 				85BEE377196249D700E18BAF /* FNXPhoto.m in Sources */,
 				8543D5091964F5BD009ADE66 /* FNXImageCache.m in Sources */,
 				85C0E9EE1964357C00B4F438 /* FNXRequest.m in Sources */,
